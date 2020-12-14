@@ -27,7 +27,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react_adopt__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! react-adopt */ "./node_modules/react-adopt/dist/index.m.js");
 /* harmony import */ var _TakeMyMoney__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./TakeMyMoney */ "./components/TakeMyMoney.js");
 var _this = undefined,
-    _jsxFileName = "D:\\JEMMYS\\SQ\\advance_react_tutorial\\frontend\\components\\Cart.js";
+    _jsxFileName = "D:\\JEMMYS\\SQ\\advance_react_tutorial\\sq-project\\frontend\\components\\Cart.js";
 
 function _templateObject2() {
   var data = _taggedTemplateLiteral(["\n  mutation {\n    toggleCart @client\n  }\n"]);
@@ -69,50 +69,24 @@ var TOGGLE_CART_MUTATION = graphql_tag__WEBPACK_IMPORTED_MODULE_6___default()(_t
 var Composed = Object(react_adopt__WEBPACK_IMPORTED_MODULE_11__["adopt"])({
   user: function user(_ref) {
     var render = _ref.render;
-    return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_User__WEBPACK_IMPORTED_MODULE_7__["default"], {
-      __self: _this,
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 28,
-        columnNumber: 25
-      }
-    }, render);
+    return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_User__WEBPACK_IMPORTED_MODULE_7__["default"], null, render);
   },
   toggleCart: function toggleCart(_ref2) {
     var render = _ref2.render;
     return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_apollo__WEBPACK_IMPORTED_MODULE_5__["Mutation"], {
-      mutation: TOGGLE_CART_MUTATION,
-      __self: _this,
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 30,
-        columnNumber: 5
-      }
+      mutation: TOGGLE_CART_MUTATION
     }, render);
   },
   localState: function localState(_ref3) {
     var render = _ref3.render;
     return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_apollo__WEBPACK_IMPORTED_MODULE_5__["Query"], {
-      query: LOCAL_STATE_QUERY,
-      __self: _this,
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 32,
-        columnNumber: 31
-      }
+      query: LOCAL_STATE_QUERY
     }, render);
   }
 });
 
 var Cart = function Cart() {
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Composed, {
-    __self: _this,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 36,
-      columnNumber: 3
-    }
-  }, function (_ref4) {
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Composed, null, function (_ref4) {
     var user = _ref4.user,
         toggleCart = _ref4.toggleCart,
         localState = _ref4.localState;
@@ -120,105 +94,18 @@ var Cart = function Cart() {
     if (!me) return null;
     console.log(me);
     return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_styles_CartStyles__WEBPACK_IMPORTED_MODULE_1__["default"], {
-      open: localState.data.cartOpen,
-      __self: _this,
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 42,
-        columnNumber: 9
-      }
-    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("header", {
-      __self: _this,
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 43,
-        columnNumber: 11
-      }
-    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_styles_CloseButton__WEBPACK_IMPORTED_MODULE_3__["default"], {
+      open: localState.data.cartOpen
+    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("header", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_styles_CloseButton__WEBPACK_IMPORTED_MODULE_3__["default"], {
       onClick: toggleCart,
-      title: "close",
-      __self: _this,
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 44,
-        columnNumber: 13
-      }
-    }, "\xD7"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_styles_Supreme__WEBPACK_IMPORTED_MODULE_2__["default"], {
-      __self: _this,
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 47,
-        columnNumber: 13
-      }
-    }, me.name, "'s Cart"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
-      __self: _this,
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 48,
-        columnNumber: 13
-      }
-    }, "You Have ", me.cart.length, " Item", me.cart.length === 1 ? "" : "s", " in your cart.")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", {
-      __self: _this,
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 53,
-        columnNumber: 11
-      }
-    }, me.cart.map(function (cartItem) {
+      title: "close"
+    }, "\xD7"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_styles_Supreme__WEBPACK_IMPORTED_MODULE_2__["default"], null, me.name, "'s Cart"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "You Have ", me.cart.length, " Item", me.cart.length === 1 ? "" : "s", " in your cart.")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", null, me.cart.map(function (cartItem) {
       return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_CartItem__WEBPACK_IMPORTED_MODULE_8__["default"], {
         key: cartItem.id,
-        cartItem: cartItem,
-        __self: _this,
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 55,
-          columnNumber: 15
-        }
+        cartItem: cartItem
       });
-    })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("footer", {
-      __self: _this,
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 58,
-        columnNumber: 11
-      }
-    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
-      __self: _this,
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 59,
-        columnNumber: 13
-      }
-    }, Object(_lib_formatMoney__WEBPACK_IMPORTED_MODULE_10__["default"])(Object(_lib_calcTotalPrice__WEBPACK_IMPORTED_MODULE_9__["default"])(me.cart))), me.cart.length == 0 ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_TakeMyMoney__WEBPACK_IMPORTED_MODULE_12__["default"], {
-      __self: _this,
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 62,
-        columnNumber: 15
-      }
-    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_styles_SickButton__WEBPACK_IMPORTED_MODULE_4__["default"], {
-      disabled: true,
-      __self: _this,
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 63,
-        columnNumber: 17
-      }
-    }, "CheckOut")) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_TakeMyMoney__WEBPACK_IMPORTED_MODULE_12__["default"], {
-      __self: _this,
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 66,
-        columnNumber: 15
-      }
-    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_styles_SickButton__WEBPACK_IMPORTED_MODULE_4__["default"], {
-      __self: _this,
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 67,
-        columnNumber: 17
-      }
-    }, "CheckOut"))));
+    })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("footer", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, Object(_lib_formatMoney__WEBPACK_IMPORTED_MODULE_10__["default"])(Object(_lib_calcTotalPrice__WEBPACK_IMPORTED_MODULE_9__["default"])(me.cart))), me.cart.length == 0 ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_TakeMyMoney__WEBPACK_IMPORTED_MODULE_12__["default"], null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_styles_SickButton__WEBPACK_IMPORTED_MODULE_4__["default"], {
+      disabled: true
+    }, "CheckOut")) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_TakeMyMoney__WEBPACK_IMPORTED_MODULE_12__["default"], null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_styles_SickButton__WEBPACK_IMPORTED_MODULE_4__["default"], null, "CheckOut"))));
   });
 };
 
@@ -244,7 +131,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react_transition_group__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(react_transition_group__WEBPACK_IMPORTED_MODULE_2__);
 /* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! styled-components */ "./node_modules/styled-components/dist/styled-components.browser.esm.js");
 var _this = undefined,
-    _jsxFileName = "D:\\JEMMYS\\SQ\\advance_react_tutorial\\frontend\\components\\CartCount.js";
+    _jsxFileName = "D:\\JEMMYS\\SQ\\advance_react_tutorial\\sq-project\\frontend\\components\\CartCount.js";
 
 
 
@@ -263,21 +150,7 @@ var Dot = styled_components__WEBPACK_IMPORTED_MODULE_3__["default"].div.withConf
 
 var CartCount = function CartCount(_ref) {
   var count = _ref.count;
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(AnimationStyles, {
-    __self: _this,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 44,
-      columnNumber: 3
-    }
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_transition_group__WEBPACK_IMPORTED_MODULE_2__["TransitionGroup"], {
-    __self: _this,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 45,
-      columnNumber: 5
-    }
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_transition_group__WEBPACK_IMPORTED_MODULE_2__["CSSTransition"], {
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(AnimationStyles, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_transition_group__WEBPACK_IMPORTED_MODULE_2__["TransitionGroup"], null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_transition_group__WEBPACK_IMPORTED_MODULE_2__["CSSTransition"], {
     unmountOnExit: true,
     className: "count",
     classNames: "count",
@@ -285,21 +158,8 @@ var CartCount = function CartCount(_ref) {
     timeout: {
       enter: 4000,
       exit: 4000
-    },
-    __self: _this,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 46,
-      columnNumber: 7
     }
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Dot, {
-    __self: _this,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 53,
-      columnNumber: 9
-    }
-  }, count))));
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Dot, null, count))));
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (CartCount);
@@ -323,7 +183,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_3__);
 /* harmony import */ var _RemoveFromCart__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./RemoveFromCart */ "./components/RemoveFromCart.js");
 var _this = undefined,
-    _jsxFileName = "D:\\JEMMYS\\SQ\\advance_react_tutorial\\frontend\\components\\CartItem.js";
+    _jsxFileName = "D:\\JEMMYS\\SQ\\advance_react_tutorial\\sq-project\\frontend\\components\\CartItem.js";
 
 
 
@@ -340,97 +200,17 @@ var CartItemStyles = styled_components__WEBPACK_IMPORTED_MODULE_2__["default"].l
 var CartItem = function CartItem(_ref) {
   var cartItem = _ref.cartItem;
   //check first if the item exists
-  if (!cartItem.item) return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(CartItemStyles, {
-    __self: _this,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 26,
-      columnNumber: 7
-    }
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
-    __self: _this,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 27,
-      columnNumber: 9
-    }
-  }, "This Item has been removed."), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_RemoveFromCart__WEBPACK_IMPORTED_MODULE_4__["default"], {
-    id: cartItem.id,
-    __self: _this,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 28,
-      columnNumber: 9
-    }
+  if (!cartItem.item) return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(CartItemStyles, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "This Item has been removed."), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_RemoveFromCart__WEBPACK_IMPORTED_MODULE_4__["default"], {
+    id: cartItem.id
   }));
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(CartItemStyles, {
-    __self: _this,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 33,
-      columnNumber: 5
-    }
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(CartItemStyles, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
     width: "100",
     src: cartItem.item.image,
-    alt: cartItem.item.title,
-    __self: _this,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 34,
-      columnNumber: 7
-    }
+    alt: cartItem.item.title
   }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "cart-item-details",
-    __self: _this,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 36,
-      columnNumber: 7
-    }
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", {
-    __self: _this,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 37,
-      columnNumber: 9
-    }
-  }, cartItem.item.title), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
-    __self: _this,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 38,
-      columnNumber: 9
-    }
-  }, "Price: ", Object(_lib_formatMoney__WEBPACK_IMPORTED_MODULE_1__["default"])(cartItem.item.price), " "), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
-    __self: _this,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 39,
-      columnNumber: 9
-    }
-  }, "Quantity: ", cartItem.quantity, " "), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
-    __self: _this,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 40,
-      columnNumber: 9
-    }
-  }, "Total:", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("em", {
-    __self: _this,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 42,
-      columnNumber: 11
-    }
-  }, Object(_lib_formatMoney__WEBPACK_IMPORTED_MODULE_1__["default"])(cartItem.item.price * cartItem.quantity)))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_RemoveFromCart__WEBPACK_IMPORTED_MODULE_4__["default"], {
-    id: cartItem.id,
-    __self: _this,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 45,
-      columnNumber: 7
-    }
+    className: "cart-item-details"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", null, cartItem.item.title), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "Price: ", Object(_lib_formatMoney__WEBPACK_IMPORTED_MODULE_1__["default"])(cartItem.item.price), " "), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "Quantity: ", cartItem.quantity, " "), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "Total:", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("em", null, Object(_lib_formatMoney__WEBPACK_IMPORTED_MODULE_1__["default"])(cartItem.item.price * cartItem.quantity)))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_RemoveFromCart__WEBPACK_IMPORTED_MODULE_4__["default"], {
+    id: cartItem.id
   }));
 };
 
@@ -456,7 +236,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! prop-types */ "./node_modules/next/node_modules/prop-types/index.js");
 /* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_2__);
 var _this = undefined,
-    _jsxFileName = "D:\\JEMMYS\\SQ\\advance_react_tutorial\\frontend\\components\\ErrorMessage.js";
+    _jsxFileName = "D:\\JEMMYS\\SQ\\advance_react_tutorial\\sq-project\\frontend\\components\\ErrorMessage.js";
 
 
 
@@ -473,55 +253,16 @@ var DisplayError = function DisplayError(_ref) {
   if (error.networkError && error.networkError.result && error.networkError.result.errors.length) {
     return error.networkError.result.errors.map(function (error, i) {
       return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(ErrorStyles, {
-        key: i,
-        __self: _this,
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 25,
-          columnNumber: 7
-        }
+        key: i
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("p", {
-        "data-test": "graphql-error",
-        __self: _this,
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 26,
-          columnNumber: 9
-        }
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("strong", {
-        __self: _this,
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 27,
-          columnNumber: 11
-        }
-      }, "Shoot!"), error.message.replace('GraphQL error: ', '')));
+        "data-test": "graphql-error"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("strong", null, "Shoot!"), error.message.replace('GraphQL error: ', '')));
     });
   }
 
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(ErrorStyles, {
-    __self: _this,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 34,
-      columnNumber: 5
-    }
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("p", {
-    "data-test": "graphql-error",
-    __self: _this,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 35,
-      columnNumber: 7
-    }
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("strong", {
-    __self: _this,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 36,
-      columnNumber: 9
-    }
-  }, "Shoot!"), error.message.replace('GraphQL error: ', '')));
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(ErrorStyles, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("p", {
+    "data-test": "graphql-error"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("strong", null, "Shoot!"), error.message.replace('GraphQL error: ', '')));
 };
 
 DisplayError.defaultProps = {
@@ -556,7 +297,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _Cart__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./Cart */ "./components/Cart.js");
 /* harmony import */ var _Search__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./Search */ "./components/Search.js");
 var _this = undefined,
-    _jsxFileName = "D:\\JEMMYS\\SQ\\advance_react_tutorial\\frontend\\components\\Header.js";
+    _jsxFileName = "D:\\JEMMYS\\SQ\\advance_react_tutorial\\sq-project\\frontend\\components\\Header.js";
 
 
 
@@ -595,73 +336,13 @@ var StyledHeader = styled_components__WEBPACK_IMPORTED_MODULE_3__["default"].hea
 });
 
 var Header = function Header() {
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(StyledHeader, {
-    __self: _this,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 57,
-      columnNumber: 3
-    }
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "bar",
-    __self: _this,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 58,
-      columnNumber: 5
-    }
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Logo, {
-    __self: _this,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 59,
-      columnNumber: 7
-    }
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(next_link__WEBPACK_IMPORTED_MODULE_2___default.a, {
-    href: "/",
-    __self: _this,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 60,
-      columnNumber: 9
-    }
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
-    __self: _this,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 61,
-      columnNumber: 11
-    }
-  }, "DeliCakes"))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Nav__WEBPACK_IMPORTED_MODULE_1__["default"], {
-    __self: _this,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 64,
-      columnNumber: 7
-    }
-  })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "sub-bar",
-    __self: _this,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 67,
-      columnNumber: 5
-    }
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Search__WEBPACK_IMPORTED_MODULE_7__["default"], {
-    __self: _this,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 68,
-      columnNumber: 7
-    }
-  })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Cart__WEBPACK_IMPORTED_MODULE_6__["default"], {
-    __self: _this,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 70,
-      columnNumber: 5
-    }
-  }));
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(StyledHeader, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "bar"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Logo, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(next_link__WEBPACK_IMPORTED_MODULE_2___default.a, {
+    href: "/"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", null, "DeliCakes"))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Nav__WEBPACK_IMPORTED_MODULE_1__["default"], null)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "sub-bar"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Search__WEBPACK_IMPORTED_MODULE_7__["default"], null)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Cart__WEBPACK_IMPORTED_MODULE_6__["default"], null));
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (Header);
@@ -682,63 +363,25 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var next_head__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! next/head */ "./node_modules/next/head.js");
 /* harmony import */ var next_head__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(next_head__WEBPACK_IMPORTED_MODULE_1__);
 var _this = undefined,
-    _jsxFileName = "D:\\JEMMYS\\SQ\\advance_react_tutorial\\frontend\\components\\Meta.js";
+    _jsxFileName = "D:\\JEMMYS\\SQ\\advance_react_tutorial\\sq-project\\frontend\\components\\Meta.js";
 
 
 
 
 var Meta = function Meta() {
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(next_head__WEBPACK_IMPORTED_MODULE_1___default.a, {
-    __self: _this,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 4,
-      columnNumber: 3
-    }
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("meta", {
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(next_head__WEBPACK_IMPORTED_MODULE_1___default.a, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("meta", {
     name: "viewport",
-    content: "width=device-width, initial-scale=1",
-    __self: _this,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 5,
-      columnNumber: 5
-    }
+    content: "width=device-width, initial-scale=1"
   }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("meta", {
-    charSet: "utf-8",
-    __self: _this,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 6,
-      columnNumber: 5
-    }
+    charSet: "utf-8"
   }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("link", {
     rel: "shortcut icon",
-    href: "/static/favicon.png",
-    __self: _this,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 7,
-      columnNumber: 5
-    }
+    href: "/static/favicon.png"
   }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("link", {
     rel: "stylesheet",
     type: "text/css",
-    href: "/static/nprogress.css",
-    __self: _this,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 8,
-      columnNumber: 5
-    }
-  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("title", {
-    __self: _this,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 9,
-      columnNumber: 5
-    }
-  }, "DeliCakes"));
+    href: "/static/nprogress.css"
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("title", null, "DeliCakes"));
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (Meta);
@@ -765,7 +408,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _Cart__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./Cart */ "./components/Cart.js");
 /* harmony import */ var _CartCount__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./CartCount */ "./components/CartCount.js");
 var _this = undefined,
-    _jsxFileName = "D:\\JEMMYS\\SQ\\advance_react_tutorial\\frontend\\components\\Nav.js";
+    _jsxFileName = "D:\\JEMMYS\\SQ\\advance_react_tutorial\\sq-project\\frontend\\components\\Nav.js";
 
 
 
@@ -777,174 +420,44 @@ var _this = undefined,
 
 
 var Nav = function Nav() {
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_User__WEBPACK_IMPORTED_MODULE_3__["default"], {
-    __self: _this,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 10,
-      columnNumber: 3
-    }
-  }, function (_ref) {
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_User__WEBPACK_IMPORTED_MODULE_3__["default"], null, function (_ref) {
     var me = _ref.data.me;
-    return console.log(me) || /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_styles_NavStyles__WEBPACK_IMPORTED_MODULE_2__["default"], {
-      __self: _this,
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 13,
-        columnNumber: 9
-      }
-    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(next_link__WEBPACK_IMPORTED_MODULE_1___default.a, {
-      href: "/items",
-      __self: _this,
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 14,
-        columnNumber: 11
-      }
-    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
-      __self: _this,
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 15,
-        columnNumber: 13
-      }
-    }, "Shop")), me && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, me.permissions.map(function (per) {
+    return console.log(me) || /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_styles_NavStyles__WEBPACK_IMPORTED_MODULE_2__["default"], null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(next_link__WEBPACK_IMPORTED_MODULE_1___default.a, {
+      href: "/items"
+    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", null, "Shop")), me && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, me.permissions.map(function (per) {
       return per === "ADMIN" ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(next_link__WEBPACK_IMPORTED_MODULE_1___default.a, {
-        href: "/sell",
-        __self: _this,
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 22,
-          columnNumber: 19
-        }
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
-        __self: _this,
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 23,
-          columnNumber: 21
-        }
-      }, "Sell")) : null;
+        href: "/sell"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", null, "Sell")) : null;
     }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(next_link__WEBPACK_IMPORTED_MODULE_1___default.a, {
-      href: "/orders",
-      __self: _this,
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 27,
-        columnNumber: 15
-      }
-    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
-      __self: _this,
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 28,
-        columnNumber: 17
-      }
-    }, "Orders")), console.log(me.permissions), me.permissions.map(function (per) {
+      href: "/orders"
+    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", null, "Orders")), console.log(me.permissions), me.permissions.map(function (per) {
       return per === "ADMIN" ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(next_link__WEBPACK_IMPORTED_MODULE_1___default.a, {
-        href: "permissions",
-        __self: _this,
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 33,
-          columnNumber: 19
-        }
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
-        __self: _this,
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 34,
-          columnNumber: 21
-        }
-      }, "Permissions")) : null;
+        href: "permissions"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", null, "Permissions")) : null;
     }), me.permissions.map(function (per) {
       return per === "ADMIN" ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(next_link__WEBPACK_IMPORTED_MODULE_1___default.a, {
-        href: "payments",
-        __self: _this,
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 40,
-          columnNumber: 19
-        }
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
-        __self: _this,
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 41,
-          columnNumber: 21
-        }
-      }, "Payments")) : null;
+        href: "payments"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", null, "Payments")) : null;
     }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(next_link__WEBPACK_IMPORTED_MODULE_1___default.a, {
       href: {
         pathname: "/me",
         query: {
           id: me.id
         }
-      },
-      __self: _this,
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 45,
-        columnNumber: 15
       }
-    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
-      __self: _this,
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 51,
-        columnNumber: 17
-      }
-    }, "Account")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_SignOut__WEBPACK_IMPORTED_MODULE_4__["default"], {
-      __self: _this,
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 53,
-        columnNumber: 15
-      }
-    }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_apollo__WEBPACK_IMPORTED_MODULE_5__["Mutation"], {
-      mutation: _Cart__WEBPACK_IMPORTED_MODULE_6__["TOGGLE_CART_MUTATION"],
-      __self: _this,
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 54,
-        columnNumber: 15
-      }
+    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", null, "Account")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_SignOut__WEBPACK_IMPORTED_MODULE_4__["default"], null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_apollo__WEBPACK_IMPORTED_MODULE_5__["Mutation"], {
+      mutation: _Cart__WEBPACK_IMPORTED_MODULE_6__["TOGGLE_CART_MUTATION"]
     }, function (toggleCart) {
       return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
-        onClick: toggleCart,
-        __self: _this,
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 56,
-          columnNumber: 19
-        }
+        onClick: toggleCart
       }, "My Cart", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_CartCount__WEBPACK_IMPORTED_MODULE_7__["default"], {
         count: me.cart.reduce(function (tally, cartItem) {
           return tally + cartItem.quantity;
-        }, 0),
-        __self: _this,
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 58,
-          columnNumber: 21
-        }
+        }, 0)
       }));
     })), !me && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(next_link__WEBPACK_IMPORTED_MODULE_1___default.a, {
-      href: "/signup",
-      __self: _this,
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 99,
-        columnNumber: 13
-      }
-    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
-      __self: _this,
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 100,
-        columnNumber: 15
-      }
-    }, "Sign In")));
+      href: "/signup"
+    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", null, "Sign In")));
   });
 };
 
@@ -966,9 +479,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_Header__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../components/Header */ "./components/Header.js");
 /* harmony import */ var _components_Meta__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../components/Meta */ "./components/Meta.js");
 /* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! styled-components */ "./node_modules/styled-components/dist/styled-components.browser.esm.js");
-var _jsxFileName = "D:\\JEMMYS\\SQ\\advance_react_tutorial\\frontend\\components\\Page.js";
-
 function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
+
+var _jsxFileName = "D:\\JEMMYS\\SQ\\advance_react_tutorial\\sq-project\\frontend\\components\\Page.js";
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
@@ -1044,42 +557,8 @@ var Page = /*#__PURE__*/function (_Component) {
     key: "render",
     value: function render() {
       return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(styled_components__WEBPACK_IMPORTED_MODULE_3__["ThemeProvider"], {
-        theme: theme,
-        __self: this,
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 59,
-          columnNumber: 7
-        }
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(StyledPage, {
-        __self: this,
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 60,
-          columnNumber: 9
-        }
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_Meta__WEBPACK_IMPORTED_MODULE_2__["default"], {
-        __self: this,
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 61,
-          columnNumber: 11
-        }
-      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_Header__WEBPACK_IMPORTED_MODULE_1__["default"], {
-        __self: this,
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 62,
-          columnNumber: 11
-        }
-      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Inner, {
-        __self: this,
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 63,
-          columnNumber: 11
-        }
-      }, " ", this.props.children, " ")));
+        theme: theme
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(StyledPage, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_Meta__WEBPACK_IMPORTED_MODULE_2__["default"], null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_Header__WEBPACK_IMPORTED_MODULE_1__["default"], null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Inner, null, " ", this.props.children, " ")));
     }
   }]);
 
@@ -1108,9 +587,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var graphql_tag__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! graphql-tag */ "./node_modules/graphql-tag/src/index.js");
 /* harmony import */ var graphql_tag__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(graphql_tag__WEBPACK_IMPORTED_MODULE_4__);
 /* harmony import */ var _User__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./User */ "./components/User.js");
-var _jsxFileName = "D:\\JEMMYS\\SQ\\advance_react_tutorial\\frontend\\components\\RemoveFromCart.js";
-
 function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
+
+var _jsxFileName = "D:\\JEMMYS\\SQ\\advance_react_tutorial\\sq-project\\frontend\\components\\RemoveFromCart.js";
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
@@ -1215,12 +694,6 @@ var RemoveFromCart = /*#__PURE__*/function (_Component) {
             __typeName: "CartItem",
             id: this.props.id
           }
-        },
-        __self: this,
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 48,
-          columnNumber: 7
         }
       }, function (removeFromCart, _ref) {
         var loading = _ref.loading,
@@ -1232,12 +705,6 @@ var RemoveFromCart = /*#__PURE__*/function (_Component) {
             removeFromCart({}).catch(function (err) {
               return alert(err.message);
             });
-          },
-          __self: _this2,
-          __source: {
-            fileName: _jsxFileName,
-            lineNumber: 61,
-            columnNumber: 11
           }
         }, "\xD7");
       });
@@ -1277,10 +744,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _styles_DropDown__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./styles/DropDown */ "./components/styles/DropDown.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_7__);
-
-var _jsxFileName = "D:\\JEMMYS\\SQ\\advance_react_tutorial\\frontend\\components\\Search.js";
-
 function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
+
+
+var _jsxFileName = "D:\\JEMMYS\\SQ\\advance_react_tutorial\\sq-project\\frontend\\components\\Search.js";
 
 function _extends() { _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }
 
@@ -1411,23 +878,10 @@ var Search = /*#__PURE__*/function (_Component) {
       var _this2 = this;
 
       Object(downshift__WEBPACK_IMPORTED_MODULE_1__["resetIdCounter"])();
-      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(_styles_DropDown__WEBPACK_IMPORTED_MODULE_6__["SearchStyles"], {
-        __self: this,
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 58,
-          columnNumber: 7
-        }
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(downshift__WEBPACK_IMPORTED_MODULE_1__["default"], {
+      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(_styles_DropDown__WEBPACK_IMPORTED_MODULE_6__["SearchStyles"], null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(downshift__WEBPACK_IMPORTED_MODULE_1__["default"], {
         onChange: routeToItem,
         itemToString: function itemToString(item) {
           return item === null ? "" : item.title;
-        },
-        __self: this,
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 59,
-          columnNumber: 9
         }
       }, function (_ref2) {
         var getInputProps = _ref2.getInputProps,
@@ -1435,22 +889,8 @@ var Search = /*#__PURE__*/function (_Component) {
             isOpen = _ref2.isOpen,
             inputValue = _ref2.inputValue,
             highlightedIndex = _ref2.highlightedIndex;
-        return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
-          __self: _this2,
-          __source: {
-            fileName: _jsxFileName,
-            lineNumber: 70,
-            columnNumber: 13
-          }
-        }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(react_apollo__WEBPACK_IMPORTED_MODULE_3__["ApolloConsumer"], {
-          __self: _this2,
-          __source: {
-            fileName: _jsxFileName,
-            lineNumber: 71,
-            columnNumber: 15
-          }
-        }, function (client) {
-          return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("input", _extends({}, getInputProps({
+        return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(react_apollo__WEBPACK_IMPORTED_MODULE_3__["ApolloConsumer"], null, function (client) {
+          return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("input", getInputProps({
             type: "search",
             placeholder: "Search for an Item",
             id: "search",
@@ -1460,52 +900,19 @@ var Search = /*#__PURE__*/function (_Component) {
 
               _this2.onChange(e, client);
             }
-          }), {
-            __self: _this2,
-            __source: {
-              fileName: _jsxFileName,
-              lineNumber: 73,
-              columnNumber: 19
-            }
           }));
-        }), isOpen && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(_styles_DropDown__WEBPACK_IMPORTED_MODULE_6__["DropDown"], {
-          __self: _this2,
-          __source: {
-            fileName: _jsxFileName,
-            lineNumber: 88,
-            columnNumber: 17
-          }
-        }, _this2.state.items.map(function (item, index) {
+        }), isOpen && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(_styles_DropDown__WEBPACK_IMPORTED_MODULE_6__["DropDown"], null, _this2.state.items.map(function (item, index) {
           return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(_styles_DropDown__WEBPACK_IMPORTED_MODULE_6__["DropDownItem"], _extends({}, getItemProps({
             item: item
           }), {
             key: item.id,
-            highlighted: index === highlightedIndex,
-            __self: _this2,
-            __source: {
-              fileName: _jsxFileName,
-              lineNumber: 90,
-              columnNumber: 21
-            }
+            highlighted: index === highlightedIndex
           }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("img", {
             width: "50",
             src: item.image,
-            alt: item.title,
-            __self: _this2,
-            __source: {
-              fileName: _jsxFileName,
-              lineNumber: 95,
-              columnNumber: 23
-            }
+            alt: item.title
           }), item.title);
-        }), !_this2.state.items.length && !_this2.state.loading && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(_styles_DropDown__WEBPACK_IMPORTED_MODULE_6__["DropDownItem"], {
-          __self: _this2,
-          __source: {
-            fileName: _jsxFileName,
-            lineNumber: 100,
-            columnNumber: 21
-          }
-        }, " Nothing Found For ", inputValue)));
+        }), !_this2.state.items.length && !_this2.state.loading && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(_styles_DropDown__WEBPACK_IMPORTED_MODULE_6__["DropDownItem"], null, " Nothing Found For ", inputValue)));
       }));
     }
   }]);
@@ -1533,7 +940,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var graphql_tag__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(graphql_tag__WEBPACK_IMPORTED_MODULE_2__);
 /* harmony import */ var _User__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./User */ "./components/User.js");
 var _this = undefined,
-    _jsxFileName = "D:\\JEMMYS\\SQ\\advance_react_tutorial\\frontend\\components\\SignOut.js";
+    _jsxFileName = "D:\\JEMMYS\\SQ\\advance_react_tutorial\\sq-project\\frontend\\components\\SignOut.js";
 
 function _templateObject() {
   var data = _taggedTemplateLiteral(["\n  mutation SIGN_OUT_MUTATION {\n    signout {\n      message\n    }\n  }\n"]);
@@ -1558,22 +965,10 @@ var SignOut = function SignOut(props) {
     mutation: SIGN_OUT_MUTATION,
     refetchQueries: [{
       query: _User__WEBPACK_IMPORTED_MODULE_3__["CURRENT_USER_QUERY"]
-    }],
-    __self: _this,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 15,
-      columnNumber: 3
-    }
+    }]
   }, function (signout) {
     return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
-      onClick: signout,
-      __self: _this,
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 19,
-        columnNumber: 19
-      }
+      onClick: signout
     }, "Sign Out");
   });
 };
@@ -1609,10 +1004,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _lib_calcTotalPrice__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../lib/calcTotalPrice */ "./lib/calcTotalPrice.js");
 /* harmony import */ var _ErrorMessage__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./ErrorMessage */ "./components/ErrorMessage.js");
 /* harmony import */ var _User__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./User */ "./components/User.js");
-
-var _jsxFileName = "D:\\JEMMYS\\SQ\\advance_react_tutorial\\frontend\\components\\TakeMyMoney.js";
-
 function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
+
+
+var _jsxFileName = "D:\\JEMMYS\\SQ\\advance_react_tutorial\\sq-project\\frontend\\components\\TakeMyMoney.js";
 
 function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { Promise.resolve(value).then(_next, _throw); } }
 
@@ -1736,26 +1131,13 @@ var TakeMyMoney = /*#__PURE__*/function (_Component) {
     value: function render() {
       var _this2 = this;
 
-      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_User__WEBPACK_IMPORTED_MODULE_10__["default"], {
-        __self: this,
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 50,
-          columnNumber: 7
-        }
-      }, function (_ref2) {
+      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_User__WEBPACK_IMPORTED_MODULE_10__["default"], null, function (_ref2) {
         var me = _ref2.data.me;
         return console.log(me) || /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(react_apollo__WEBPACK_IMPORTED_MODULE_3__["Mutation"], {
           mutation: CREATE_ORDER_MUTATION,
           refetchQueries: [{
             query: _User__WEBPACK_IMPORTED_MODULE_10__["CURRENT_USER_QUERY"]
-          }],
-          __self: _this2,
-          __source: {
-            fileName: _jsxFileName,
-            lineNumber: 54,
-            columnNumber: 11
-          }
+          }]
         }, function (createOrder) {
           return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(react_stripe_checkout__WEBPACK_IMPORTED_MODULE_2___default.a, {
             amount: Object(_lib_calcTotalPrice__WEBPACK_IMPORTED_MODULE_8__["default"])(me.cart),
@@ -1767,12 +1149,6 @@ var TakeMyMoney = /*#__PURE__*/function (_Component) {
             email: me.email,
             token: function token(res) {
               return _this2.onToken(res, createOrder);
-            },
-            __self: _this2,
-            __source: {
-              fileName: _jsxFileName,
-              lineNumber: 59,
-              columnNumber: 15
             }
           }, _this2.props.children);
         });
@@ -1805,7 +1181,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! prop-types */ "./node_modules/next/node_modules/prop-types/index.js");
 /* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_3__);
 var _this = undefined,
-    _jsxFileName = "D:\\JEMMYS\\SQ\\advance_react_tutorial\\frontend\\components\\User.js";
+    _jsxFileName = "D:\\JEMMYS\\SQ\\advance_react_tutorial\\sq-project\\frontend\\components\\User.js";
 
 
 
@@ -1830,13 +1206,7 @@ var CURRENT_USER_QUERY = graphql_tag__WEBPACK_IMPORTED_MODULE_2___default()(_tem
 
 var User = function User(props) {
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_apollo__WEBPACK_IMPORTED_MODULE_1__["Query"], _extends({}, props, {
-    query: CURRENT_USER_QUERY,
-    __self: _this,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 28,
-      columnNumber: 3
-    }
+    query: CURRENT_USER_QUERY
   }), function (payload) {
     return props.children(payload);
   });
@@ -10213,6 +9583,78 @@ function stripSymbols(data) {
 
 /***/ }),
 
+/***/ "./node_modules/call-bind/callBound.js":
+/*!*********************************************!*\
+  !*** ./node_modules/call-bind/callBound.js ***!
+  \*********************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var GetIntrinsic = __webpack_require__(/*! get-intrinsic */ "./node_modules/get-intrinsic/index.js");
+
+var callBind = __webpack_require__(/*! ./ */ "./node_modules/call-bind/index.js");
+
+var $indexOf = callBind(GetIntrinsic('String.prototype.indexOf'));
+
+module.exports = function callBoundIntrinsic(name, allowMissing) {
+	var intrinsic = GetIntrinsic(name, !!allowMissing);
+	if (typeof intrinsic === 'function' && $indexOf(name, '.prototype.') > -1) {
+		return callBind(intrinsic);
+	}
+	return intrinsic;
+};
+
+
+/***/ }),
+
+/***/ "./node_modules/call-bind/index.js":
+/*!*****************************************!*\
+  !*** ./node_modules/call-bind/index.js ***!
+  \*****************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var bind = __webpack_require__(/*! function-bind */ "./node_modules/function-bind/index.js");
+var GetIntrinsic = __webpack_require__(/*! get-intrinsic */ "./node_modules/get-intrinsic/index.js");
+
+var $apply = GetIntrinsic('%Function.prototype.apply%');
+var $call = GetIntrinsic('%Function.prototype.call%');
+var $reflectApply = GetIntrinsic('%Reflect.apply%', true) || bind.call($call, $apply);
+
+var $defineProperty = GetIntrinsic('%Object.defineProperty%', true);
+
+if ($defineProperty) {
+	try {
+		$defineProperty({}, 'a', { value: 1 });
+	} catch (e) {
+		// IE 8 has a broken defineProperty
+		$defineProperty = null;
+	}
+}
+
+module.exports = function callBind() {
+	return $reflectApply(bind, $call, arguments);
+};
+
+var applyBind = function applyBind() {
+	return $reflectApply(bind, $apply, arguments);
+};
+
+if ($defineProperty) {
+	$defineProperty(module.exports, 'apply', { value: applyBind });
+} else {
+	module.exports.apply = applyBind;
+}
+
+
+/***/ }),
+
 /***/ "./node_modules/compute-scroll-into-view/dist/index.module.js":
 /*!********************************************************************!*\
   !*** ./node_modules/compute-scroll-into-view/dist/index.module.js ***!
@@ -11043,7 +10485,7 @@ module.exports = function (NAME, wrapper, methods, common, IS_MAP, IS_WEAK) {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-var core = module.exports = { version: '2.6.11' };
+var core = module.exports = { version: '2.6.12' };
 if (typeof __e == 'number') __e = core; // eslint-disable-line no-undef
 
 
@@ -12472,7 +11914,7 @@ var store = global[SHARED] || (global[SHARED] = {});
 })('versions', []).push({
   version: core.version,
   mode: __webpack_require__(/*! ./_library */ "./node_modules/core-js/library/modules/_library.js") ? 'pure' : 'global',
-  copyright: '© 2019 Denis Pushkarev (zloirock.ru)'
+  copyright: '© 2020 Denis Pushkarev (zloirock.ru)'
 });
 
 
@@ -15875,6 +15317,309 @@ module.exports = function bind(that) {
 var implementation = __webpack_require__(/*! ./implementation */ "./node_modules/function-bind/implementation.js");
 
 module.exports = Function.prototype.bind || implementation;
+
+
+/***/ }),
+
+/***/ "./node_modules/get-intrinsic/index.js":
+/*!*********************************************!*\
+  !*** ./node_modules/get-intrinsic/index.js ***!
+  \*********************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+/* globals
+	AggregateError,
+	Atomics,
+	FinalizationRegistry,
+	SharedArrayBuffer,
+	WeakRef,
+*/
+
+var undefined;
+
+var $SyntaxError = SyntaxError;
+var $Function = Function;
+var $TypeError = TypeError;
+
+// eslint-disable-next-line consistent-return
+var getEvalledConstructor = function (expressionSyntax) {
+	try {
+		// eslint-disable-next-line no-new-func
+		return Function('"use strict"; return (' + expressionSyntax + ').constructor;')();
+	} catch (e) {}
+};
+
+var $gOPD = Object.getOwnPropertyDescriptor;
+if ($gOPD) {
+	try {
+		$gOPD({}, '');
+	} catch (e) {
+		$gOPD = null; // this is IE 8, which has a broken gOPD
+	}
+}
+
+var throwTypeError = function () {
+	throw new $TypeError();
+};
+var ThrowTypeError = $gOPD
+	? (function () {
+		try {
+			// eslint-disable-next-line no-unused-expressions, no-caller, no-restricted-properties
+			arguments.callee; // IE 8 does not throw here
+			return throwTypeError;
+		} catch (calleeThrows) {
+			try {
+				// IE 8 throws on Object.getOwnPropertyDescriptor(arguments, '')
+				return $gOPD(arguments, 'callee').get;
+			} catch (gOPDthrows) {
+				return throwTypeError;
+			}
+		}
+	}())
+	: throwTypeError;
+
+var hasSymbols = __webpack_require__(/*! has-symbols */ "./node_modules/has-symbols/index.js")();
+
+var getProto = Object.getPrototypeOf || function (x) { return x.__proto__; }; // eslint-disable-line no-proto
+
+var asyncGenFunction = getEvalledConstructor('async function* () {}');
+var asyncGenFunctionPrototype = asyncGenFunction ? asyncGenFunction.prototype : undefined;
+var asyncGenPrototype = asyncGenFunctionPrototype ? asyncGenFunctionPrototype.prototype : undefined;
+
+var TypedArray = typeof Uint8Array === 'undefined' ? undefined : getProto(Uint8Array);
+
+var INTRINSICS = {
+	'%AggregateError%': typeof AggregateError === 'undefined' ? undefined : AggregateError,
+	'%Array%': Array,
+	'%ArrayBuffer%': typeof ArrayBuffer === 'undefined' ? undefined : ArrayBuffer,
+	'%ArrayIteratorPrototype%': hasSymbols ? getProto([][Symbol.iterator]()) : undefined,
+	'%AsyncFromSyncIteratorPrototype%': undefined,
+	'%AsyncFunction%': getEvalledConstructor('async function () {}'),
+	'%AsyncGenerator%': asyncGenFunctionPrototype,
+	'%AsyncGeneratorFunction%': asyncGenFunction,
+	'%AsyncIteratorPrototype%': asyncGenPrototype ? getProto(asyncGenPrototype) : undefined,
+	'%Atomics%': typeof Atomics === 'undefined' ? undefined : Atomics,
+	'%BigInt%': typeof BigInt === 'undefined' ? undefined : BigInt,
+	'%Boolean%': Boolean,
+	'%DataView%': typeof DataView === 'undefined' ? undefined : DataView,
+	'%Date%': Date,
+	'%decodeURI%': decodeURI,
+	'%decodeURIComponent%': decodeURIComponent,
+	'%encodeURI%': encodeURI,
+	'%encodeURIComponent%': encodeURIComponent,
+	'%Error%': Error,
+	'%eval%': eval, // eslint-disable-line no-eval
+	'%EvalError%': EvalError,
+	'%Float32Array%': typeof Float32Array === 'undefined' ? undefined : Float32Array,
+	'%Float64Array%': typeof Float64Array === 'undefined' ? undefined : Float64Array,
+	'%FinalizationRegistry%': typeof FinalizationRegistry === 'undefined' ? undefined : FinalizationRegistry,
+	'%Function%': $Function,
+	'%GeneratorFunction%': getEvalledConstructor('function* () {}'),
+	'%Int8Array%': typeof Int8Array === 'undefined' ? undefined : Int8Array,
+	'%Int16Array%': typeof Int16Array === 'undefined' ? undefined : Int16Array,
+	'%Int32Array%': typeof Int32Array === 'undefined' ? undefined : Int32Array,
+	'%isFinite%': isFinite,
+	'%isNaN%': isNaN,
+	'%IteratorPrototype%': hasSymbols ? getProto(getProto([][Symbol.iterator]())) : undefined,
+	'%JSON%': typeof JSON === 'object' ? JSON : undefined,
+	'%Map%': typeof Map === 'undefined' ? undefined : Map,
+	'%MapIteratorPrototype%': typeof Map === 'undefined' || !hasSymbols ? undefined : getProto(new Map()[Symbol.iterator]()),
+	'%Math%': Math,
+	'%Number%': Number,
+	'%Object%': Object,
+	'%parseFloat%': parseFloat,
+	'%parseInt%': parseInt,
+	'%Promise%': typeof Promise === 'undefined' ? undefined : Promise,
+	'%Proxy%': typeof Proxy === 'undefined' ? undefined : Proxy,
+	'%RangeError%': RangeError,
+	'%ReferenceError%': ReferenceError,
+	'%Reflect%': typeof Reflect === 'undefined' ? undefined : Reflect,
+	'%RegExp%': RegExp,
+	'%Set%': typeof Set === 'undefined' ? undefined : Set,
+	'%SetIteratorPrototype%': typeof Set === 'undefined' || !hasSymbols ? undefined : getProto(new Set()[Symbol.iterator]()),
+	'%SharedArrayBuffer%': typeof SharedArrayBuffer === 'undefined' ? undefined : SharedArrayBuffer,
+	'%String%': String,
+	'%StringIteratorPrototype%': hasSymbols ? getProto(''[Symbol.iterator]()) : undefined,
+	'%Symbol%': hasSymbols ? Symbol : undefined,
+	'%SyntaxError%': $SyntaxError,
+	'%ThrowTypeError%': ThrowTypeError,
+	'%TypedArray%': TypedArray,
+	'%TypeError%': $TypeError,
+	'%Uint8Array%': typeof Uint8Array === 'undefined' ? undefined : Uint8Array,
+	'%Uint8ClampedArray%': typeof Uint8ClampedArray === 'undefined' ? undefined : Uint8ClampedArray,
+	'%Uint16Array%': typeof Uint16Array === 'undefined' ? undefined : Uint16Array,
+	'%Uint32Array%': typeof Uint32Array === 'undefined' ? undefined : Uint32Array,
+	'%URIError%': URIError,
+	'%WeakMap%': typeof WeakMap === 'undefined' ? undefined : WeakMap,
+	'%WeakRef%': typeof WeakRef === 'undefined' ? undefined : WeakRef,
+	'%WeakSet%': typeof WeakSet === 'undefined' ? undefined : WeakSet
+};
+
+var LEGACY_ALIASES = {
+	'%ArrayBufferPrototype%': ['ArrayBuffer', 'prototype'],
+	'%ArrayPrototype%': ['Array', 'prototype'],
+	'%ArrayProto_entries%': ['Array', 'prototype', 'entries'],
+	'%ArrayProto_forEach%': ['Array', 'prototype', 'forEach'],
+	'%ArrayProto_keys%': ['Array', 'prototype', 'keys'],
+	'%ArrayProto_values%': ['Array', 'prototype', 'values'],
+	'%AsyncFunctionPrototype%': ['AsyncFunction', 'prototype'],
+	'%AsyncGenerator%': ['AsyncGeneratorFunction', 'prototype'],
+	'%AsyncGeneratorPrototype%': ['AsyncGeneratorFunction', 'prototype', 'prototype'],
+	'%BooleanPrototype%': ['Boolean', 'prototype'],
+	'%DataViewPrototype%': ['DataView', 'prototype'],
+	'%DatePrototype%': ['Date', 'prototype'],
+	'%ErrorPrototype%': ['Error', 'prototype'],
+	'%EvalErrorPrototype%': ['EvalError', 'prototype'],
+	'%Float32ArrayPrototype%': ['Float32Array', 'prototype'],
+	'%Float64ArrayPrototype%': ['Float64Array', 'prototype'],
+	'%FunctionPrototype%': ['Function', 'prototype'],
+	'%Generator%': ['GeneratorFunction', 'prototype'],
+	'%GeneratorPrototype%': ['GeneratorFunction', 'prototype', 'prototype'],
+	'%Int8ArrayPrototype%': ['Int8Array', 'prototype'],
+	'%Int16ArrayPrototype%': ['Int16Array', 'prototype'],
+	'%Int32ArrayPrototype%': ['Int32Array', 'prototype'],
+	'%JSONParse%': ['JSON', 'parse'],
+	'%JSONStringify%': ['JSON', 'stringify'],
+	'%MapPrototype%': ['Map', 'prototype'],
+	'%NumberPrototype%': ['Number', 'prototype'],
+	'%ObjectPrototype%': ['Object', 'prototype'],
+	'%ObjProto_toString%': ['Object', 'prototype', 'toString'],
+	'%ObjProto_valueOf%': ['Object', 'prototype', 'valueOf'],
+	'%PromisePrototype%': ['Promise', 'prototype'],
+	'%PromiseProto_then%': ['Promise', 'prototype', 'then'],
+	'%Promise_all%': ['Promise', 'all'],
+	'%Promise_reject%': ['Promise', 'reject'],
+	'%Promise_resolve%': ['Promise', 'resolve'],
+	'%RangeErrorPrototype%': ['RangeError', 'prototype'],
+	'%ReferenceErrorPrototype%': ['ReferenceError', 'prototype'],
+	'%RegExpPrototype%': ['RegExp', 'prototype'],
+	'%SetPrototype%': ['Set', 'prototype'],
+	'%SharedArrayBufferPrototype%': ['SharedArrayBuffer', 'prototype'],
+	'%StringPrototype%': ['String', 'prototype'],
+	'%SymbolPrototype%': ['Symbol', 'prototype'],
+	'%SyntaxErrorPrototype%': ['SyntaxError', 'prototype'],
+	'%TypedArrayPrototype%': ['TypedArray', 'prototype'],
+	'%TypeErrorPrototype%': ['TypeError', 'prototype'],
+	'%Uint8ArrayPrototype%': ['Uint8Array', 'prototype'],
+	'%Uint8ClampedArrayPrototype%': ['Uint8ClampedArray', 'prototype'],
+	'%Uint16ArrayPrototype%': ['Uint16Array', 'prototype'],
+	'%Uint32ArrayPrototype%': ['Uint32Array', 'prototype'],
+	'%URIErrorPrototype%': ['URIError', 'prototype'],
+	'%WeakMapPrototype%': ['WeakMap', 'prototype'],
+	'%WeakSetPrototype%': ['WeakSet', 'prototype']
+};
+
+var bind = __webpack_require__(/*! function-bind */ "./node_modules/function-bind/index.js");
+var hasOwn = __webpack_require__(/*! has */ "./node_modules/has/src/index.js");
+var $concat = bind.call(Function.call, Array.prototype.concat);
+var $spliceApply = bind.call(Function.apply, Array.prototype.splice);
+var $replace = bind.call(Function.call, String.prototype.replace);
+
+/* adapted from https://github.com/lodash/lodash/blob/4.17.15/dist/lodash.js#L6735-L6744 */
+var rePropName = /[^%.[\]]+|\[(?:(-?\d+(?:\.\d+)?)|(["'])((?:(?!\2)[^\\]|\\.)*?)\2)\]|(?=(?:\.|\[\])(?:\.|\[\]|%$))/g;
+var reEscapeChar = /\\(\\)?/g; /** Used to match backslashes in property paths. */
+var stringToPath = function stringToPath(string) {
+	var result = [];
+	$replace(string, rePropName, function (match, number, quote, subString) {
+		result[result.length] = quote ? $replace(subString, reEscapeChar, '$1') : number || match;
+	});
+	return result;
+};
+/* end adaptation */
+
+var getBaseIntrinsic = function getBaseIntrinsic(name, allowMissing) {
+	var intrinsicName = name;
+	var alias;
+	if (hasOwn(LEGACY_ALIASES, intrinsicName)) {
+		alias = LEGACY_ALIASES[intrinsicName];
+		intrinsicName = '%' + alias[0] + '%';
+	}
+
+	if (hasOwn(INTRINSICS, intrinsicName)) {
+		var value = INTRINSICS[intrinsicName];
+		if (typeof value === 'undefined' && !allowMissing) {
+			throw new $TypeError('intrinsic ' + name + ' exists, but is not available. Please file an issue!');
+		}
+
+		return {
+			alias: alias,
+			name: intrinsicName,
+			value: value
+		};
+	}
+
+	throw new $SyntaxError('intrinsic ' + name + ' does not exist!');
+};
+
+module.exports = function GetIntrinsic(name, allowMissing) {
+	if (typeof name !== 'string' || name.length === 0) {
+		throw new $TypeError('intrinsic name must be a non-empty string');
+	}
+	if (arguments.length > 1 && typeof allowMissing !== 'boolean') {
+		throw new $TypeError('"allowMissing" argument must be a boolean');
+	}
+
+	var parts = stringToPath(name);
+	var intrinsicBaseName = parts.length > 0 ? parts[0] : '';
+
+	var intrinsic = getBaseIntrinsic('%' + intrinsicBaseName + '%', allowMissing);
+	var intrinsicRealName = intrinsic.name;
+	var value = intrinsic.value;
+	var skipFurtherCaching = false;
+
+	var alias = intrinsic.alias;
+	if (alias) {
+		intrinsicBaseName = alias[0];
+		$spliceApply(parts, $concat([0, 1], alias));
+	}
+
+	for (var i = 1, isOwn = true; i < parts.length; i += 1) {
+		var part = parts[i];
+		if (part === 'constructor' || !isOwn) {
+			skipFurtherCaching = true;
+		}
+
+		intrinsicBaseName += '.' + part;
+		intrinsicRealName = '%' + intrinsicBaseName + '%';
+
+		if (hasOwn(INTRINSICS, intrinsicRealName)) {
+			value = INTRINSICS[intrinsicRealName];
+		} else if (value != null) {
+			if ($gOPD && (i + 1) >= parts.length) {
+				var desc = $gOPD(value, part);
+				isOwn = !!desc;
+
+				if (!allowMissing && !(part in value)) {
+					throw new $TypeError('base intrinsic for ' + name + ' exists, but the property is not available.');
+				}
+				// By convention, when a data property is converted to an accessor
+				// property to emulate a data property that does not suffer from
+				// the override mistake, that accessor's getter is marked with
+				// an `originalValue` property. Here, when we detect this, we
+				// uphold the illusion by pretending to see that original data
+				// property, i.e., returning the value rather than the getter
+				// itself.
+				if (isOwn && 'get' in desc && !('originalValue' in desc.get)) {
+					value = desc.get;
+				} else {
+					value = value[part];
+				}
+			} else {
+				isOwn = hasOwn(value, part);
+				value = value[part];
+			}
+
+			if (isOwn && !skipFurtherCaching) {
+				INTRINSICS[intrinsicRealName] = value;
+			}
+		}
+	}
+	return value;
+};
 
 
 /***/ }),
@@ -41741,7 +41486,7 @@ var canBeObject = function (obj) {
 	return typeof obj !== 'undefined' && obj !== null;
 };
 var hasSymbols = __webpack_require__(/*! has-symbols/shams */ "./node_modules/has-symbols/shams.js")();
-var callBound = __webpack_require__(/*! es-abstract/helpers/callBound */ "./node_modules/object.assign/node_modules/es-abstract/helpers/callBound.js");
+var callBound = __webpack_require__(/*! call-bind/callBound */ "./node_modules/call-bind/callBound.js");
 var toObject = Object;
 var $push = callBound('Array.prototype.push');
 var $propIsEnumerable = callBound('Object.prototype.propertyIsEnumerable');
@@ -41790,7 +41535,7 @@ module.exports = function assign(target, source1) {
 
 
 var defineProperties = __webpack_require__(/*! define-properties */ "./node_modules/define-properties/index.js");
-var callBind = __webpack_require__(/*! es-abstract/helpers/callBind */ "./node_modules/object.assign/node_modules/es-abstract/helpers/callBind.js");
+var callBind = __webpack_require__(/*! call-bind */ "./node_modules/call-bind/index.js");
 
 var implementation = __webpack_require__(/*! ./implementation */ "./node_modules/object.assign/implementation.js");
 var getPolyfill = __webpack_require__(/*! ./polyfill */ "./node_modules/object.assign/polyfill.js");
@@ -41809,380 +41554,6 @@ defineProperties(bound, {
 });
 
 module.exports = bound;
-
-
-/***/ }),
-
-/***/ "./node_modules/object.assign/node_modules/es-abstract/GetIntrinsic.js":
-/*!*****************************************************************************!*\
-  !*** ./node_modules/object.assign/node_modules/es-abstract/GetIntrinsic.js ***!
-  \*****************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-/* globals
-	AggregateError,
-	Atomics,
-	FinalizationRegistry,
-	SharedArrayBuffer,
-	WeakRef,
-*/
-
-var undefined;
-
-var $SyntaxError = SyntaxError;
-var $Function = Function;
-var $TypeError = TypeError;
-
-// eslint-disable-next-line consistent-return
-var getEvalledConstructor = function (expressionSyntax) {
-	try {
-		// eslint-disable-next-line no-new-func
-		return Function('"use strict"; return (' + expressionSyntax + ').constructor;')();
-	} catch (e) {}
-};
-
-var $gOPD = Object.getOwnPropertyDescriptor;
-if ($gOPD) {
-	try {
-		$gOPD({}, '');
-	} catch (e) {
-		$gOPD = null; // this is IE 8, which has a broken gOPD
-	}
-}
-
-var throwTypeError = function () { throw new $TypeError(); };
-var ThrowTypeError = $gOPD
-	? (function () {
-		try {
-			// eslint-disable-next-line no-unused-expressions, no-caller, no-restricted-properties
-			arguments.callee; // IE 8 does not throw here
-			return throwTypeError;
-		} catch (calleeThrows) {
-			try {
-				// IE 8 throws on Object.getOwnPropertyDescriptor(arguments, '')
-				return $gOPD(arguments, 'callee').get;
-			} catch (gOPDthrows) {
-				return throwTypeError;
-			}
-		}
-	}())
-	: throwTypeError;
-
-var hasSymbols = __webpack_require__(/*! has-symbols */ "./node_modules/has-symbols/index.js")();
-
-var getProto = Object.getPrototypeOf || function (x) { return x.__proto__; }; // eslint-disable-line no-proto
-
-var asyncGenFunction = getEvalledConstructor('async function* () {}');
-var asyncGenFunctionPrototype = asyncGenFunction ? asyncGenFunction.prototype : undefined;
-var asyncGenPrototype = asyncGenFunctionPrototype ? asyncGenFunctionPrototype.prototype : undefined;
-
-var TypedArray = typeof Uint8Array === 'undefined' ? undefined : getProto(Uint8Array);
-
-var INTRINSICS = {
-	'%AggregateError%': typeof AggregateError === 'undefined' ? undefined : AggregateError,
-	'%Array%': Array,
-	'%ArrayBuffer%': typeof ArrayBuffer === 'undefined' ? undefined : ArrayBuffer,
-	'%ArrayIteratorPrototype%': hasSymbols ? getProto([][Symbol.iterator]()) : undefined,
-	'%AsyncFromSyncIteratorPrototype%': undefined,
-	'%AsyncFunction%': getEvalledConstructor('async function () {}'),
-	'%AsyncGenerator%': asyncGenFunctionPrototype,
-	'%AsyncGeneratorFunction%': asyncGenFunction,
-	'%AsyncIteratorPrototype%': asyncGenPrototype ? getProto(asyncGenPrototype) : undefined,
-	'%Atomics%': typeof Atomics === 'undefined' ? undefined : Atomics,
-	'%BigInt%': typeof BigInt === 'undefined' ? undefined : BigInt,
-	'%Boolean%': Boolean,
-	'%DataView%': typeof DataView === 'undefined' ? undefined : DataView,
-	'%Date%': Date,
-	'%decodeURI%': decodeURI,
-	'%decodeURIComponent%': decodeURIComponent,
-	'%encodeURI%': encodeURI,
-	'%encodeURIComponent%': encodeURIComponent,
-	'%Error%': Error,
-	'%eval%': eval, // eslint-disable-line no-eval
-	'%EvalError%': EvalError,
-	'%Float32Array%': typeof Float32Array === 'undefined' ? undefined : Float32Array,
-	'%Float64Array%': typeof Float64Array === 'undefined' ? undefined : Float64Array,
-	'%FinalizationRegistry%': typeof FinalizationRegistry === 'undefined' ? undefined : FinalizationRegistry,
-	'%Function%': $Function,
-	'%GeneratorFunction%': getEvalledConstructor('function* () {}'),
-	'%Int8Array%': typeof Int8Array === 'undefined' ? undefined : Int8Array,
-	'%Int16Array%': typeof Int16Array === 'undefined' ? undefined : Int16Array,
-	'%Int32Array%': typeof Int32Array === 'undefined' ? undefined : Int32Array,
-	'%isFinite%': isFinite,
-	'%isNaN%': isNaN,
-	'%IteratorPrototype%': hasSymbols ? getProto(getProto([][Symbol.iterator]())) : undefined,
-	'%JSON%': typeof JSON === 'object' ? JSON : undefined,
-	'%Map%': typeof Map === 'undefined' ? undefined : Map,
-	'%MapIteratorPrototype%': typeof Map === 'undefined' || !hasSymbols ? undefined : getProto(new Map()[Symbol.iterator]()),
-	'%Math%': Math,
-	'%Number%': Number,
-	'%Object%': Object,
-	'%parseFloat%': parseFloat,
-	'%parseInt%': parseInt,
-	'%Promise%': typeof Promise === 'undefined' ? undefined : Promise,
-	'%Proxy%': typeof Proxy === 'undefined' ? undefined : Proxy,
-	'%RangeError%': RangeError,
-	'%ReferenceError%': ReferenceError,
-	'%Reflect%': typeof Reflect === 'undefined' ? undefined : Reflect,
-	'%RegExp%': RegExp,
-	'%Set%': typeof Set === 'undefined' ? undefined : Set,
-	'%SetIteratorPrototype%': typeof Set === 'undefined' || !hasSymbols ? undefined : getProto(new Set()[Symbol.iterator]()),
-	'%SharedArrayBuffer%': typeof SharedArrayBuffer === 'undefined' ? undefined : SharedArrayBuffer,
-	'%String%': String,
-	'%StringIteratorPrototype%': hasSymbols ? getProto(''[Symbol.iterator]()) : undefined,
-	'%Symbol%': hasSymbols ? Symbol : undefined,
-	'%SyntaxError%': $SyntaxError,
-	'%ThrowTypeError%': ThrowTypeError,
-	'%TypedArray%': TypedArray,
-	'%TypeError%': $TypeError,
-	'%Uint8Array%': typeof Uint8Array === 'undefined' ? undefined : Uint8Array,
-	'%Uint8ClampedArray%': typeof Uint8ClampedArray === 'undefined' ? undefined : Uint8ClampedArray,
-	'%Uint16Array%': typeof Uint16Array === 'undefined' ? undefined : Uint16Array,
-	'%Uint32Array%': typeof Uint32Array === 'undefined' ? undefined : Uint32Array,
-	'%URIError%': URIError,
-	'%WeakMap%': typeof WeakMap === 'undefined' ? undefined : WeakMap,
-	'%WeakRef%': typeof WeakRef === 'undefined' ? undefined : WeakRef,
-	'%WeakSet%': typeof WeakSet === 'undefined' ? undefined : WeakSet
-};
-
-var LEGACY_ALIASES = {
-	'%ArrayBufferPrototype%': ['ArrayBuffer', 'prototype'],
-	'%ArrayPrototype%': ['Array', 'prototype'],
-	'%ArrayProto_entries%': ['Array', 'prototype', 'entries'],
-	'%ArrayProto_forEach%': ['Array', 'prototype', 'forEach'],
-	'%ArrayProto_keys%': ['Array', 'prototype', 'keys'],
-	'%ArrayProto_values%': ['Array', 'prototype', 'values'],
-	'%AsyncFunctionPrototype%': ['AsyncFunction', 'prototype'],
-	'%AsyncGenerator%': ['AsyncGeneratorFunction', 'prototype'],
-	'%AsyncGeneratorPrototype%': ['AsyncGeneratorFunction', 'prototype', 'prototype'],
-	'%BooleanPrototype%': ['Boolean', 'prototype'],
-	'%DataViewPrototype%': ['DataView', 'prototype'],
-	'%DatePrototype%': ['Date', 'prototype'],
-	'%ErrorPrototype%': ['Error', 'prototype'],
-	'%EvalErrorPrototype%': ['EvalError', 'prototype'],
-	'%Float32ArrayPrototype%': ['Float32Array', 'prototype'],
-	'%Float64ArrayPrototype%': ['Float64Array', 'prototype'],
-	'%FunctionPrototype%': ['Function', 'prototype'],
-	'%Generator%': ['GeneratorFunction', 'prototype'],
-	'%GeneratorPrototype%': ['GeneratorFunction', 'prototype', 'prototype'],
-	'%Int8ArrayPrototype%': ['Int8Array', 'prototype'],
-	'%Int16ArrayPrototype%': ['Int16Array', 'prototype'],
-	'%Int32ArrayPrototype%': ['Int32Array', 'prototype'],
-	'%JSONParse%': ['JSON', 'parse'],
-	'%JSONStringify%': ['JSON', 'stringify'],
-	'%MapPrototype%': ['Map', 'prototype'],
-	'%NumberPrototype%': ['Number', 'prototype'],
-	'%ObjectPrototype%': ['Object', 'prototype'],
-	'%ObjProto_toString%': ['Object', 'prototype', 'toString'],
-	'%ObjProto_valueOf%': ['Object', 'prototype', 'valueOf'],
-	'%PromisePrototype%': ['Promise', 'prototype'],
-	'%PromiseProto_then%': ['Promise', 'prototype', 'then'],
-	'%Promise_all%': ['Promise', 'all'],
-	'%Promise_reject%': ['Promise', 'reject'],
-	'%Promise_resolve%': ['Promise', 'resolve'],
-	'%RangeErrorPrototype%': ['RangeError', 'prototype'],
-	'%ReferenceErrorPrototype%': ['ReferenceError', 'prototype'],
-	'%RegExpPrototype%': ['RegExp', 'prototype'],
-	'%SetPrototype%': ['Set', 'prototype'],
-	'%SharedArrayBufferPrototype%': ['SharedArrayBuffer', 'prototype'],
-	'%StringPrototype%': ['String', 'prototype'],
-	'%SymbolPrototype%': ['Symbol', 'prototype'],
-	'%SyntaxErrorPrototype%': ['SyntaxError', 'prototype'],
-	'%TypedArrayPrototype%': ['TypedArray', 'prototype'],
-	'%TypeErrorPrototype%': ['TypeError', 'prototype'],
-	'%Uint8ArrayPrototype%': ['Uint8Array', 'prototype'],
-	'%Uint8ClampedArrayPrototype%': ['Uint8ClampedArray', 'prototype'],
-	'%Uint16ArrayPrototype%': ['Uint16Array', 'prototype'],
-	'%Uint32ArrayPrototype%': ['Uint32Array', 'prototype'],
-	'%URIErrorPrototype%': ['URIError', 'prototype'],
-	'%WeakMapPrototype%': ['WeakMap', 'prototype'],
-	'%WeakSetPrototype%': ['WeakSet', 'prototype']
-};
-
-var bind = __webpack_require__(/*! function-bind */ "./node_modules/function-bind/index.js");
-var hasOwn = __webpack_require__(/*! has */ "./node_modules/has/src/index.js");
-var $concat = bind.call(Function.call, Array.prototype.concat);
-var $spliceApply = bind.call(Function.apply, Array.prototype.splice);
-var $replace = bind.call(Function.call, String.prototype.replace);
-
-/* adapted from https://github.com/lodash/lodash/blob/4.17.15/dist/lodash.js#L6735-L6744 */
-var rePropName = /[^%.[\]]+|\[(?:(-?\d+(?:\.\d+)?)|(["'])((?:(?!\2)[^\\]|\\.)*?)\2)\]|(?=(?:\.|\[\])(?:\.|\[\]|%$))/g;
-var reEscapeChar = /\\(\\)?/g; /** Used to match backslashes in property paths. */
-var stringToPath = function stringToPath(string) {
-	var result = [];
-	$replace(string, rePropName, function (match, number, quote, subString) {
-		result[result.length] = quote ? $replace(subString, reEscapeChar, '$1') : number || match;
-	});
-	return result;
-};
-/* end adaptation */
-
-var getBaseIntrinsic = function getBaseIntrinsic(name, allowMissing) {
-	var intrinsicName = name;
-	var alias;
-	if (hasOwn(LEGACY_ALIASES, intrinsicName)) {
-		alias = LEGACY_ALIASES[intrinsicName];
-		intrinsicName = '%' + alias[0] + '%';
-	}
-
-	if (hasOwn(INTRINSICS, intrinsicName)) {
-		var value = INTRINSICS[intrinsicName];
-		if (typeof value === 'undefined' && !allowMissing) {
-			throw new $TypeError('intrinsic ' + name + ' exists, but is not available. Please file an issue!');
-		}
-
-		return {
-			alias: alias,
-			name: intrinsicName,
-			value: value
-		};
-	}
-
-	throw new $SyntaxError('intrinsic ' + name + ' does not exist!');
-};
-
-module.exports = function GetIntrinsic(name, allowMissing) {
-	if (typeof name !== 'string' || name.length === 0) {
-		throw new $TypeError('intrinsic name must be a non-empty string');
-	}
-	if (arguments.length > 1 && typeof allowMissing !== 'boolean') {
-		throw new $TypeError('"allowMissing" argument must be a boolean');
-	}
-
-	var parts = stringToPath(name);
-	var intrinsicBaseName = parts.length > 0 ? parts[0] : '';
-
-	var intrinsic = getBaseIntrinsic('%' + intrinsicBaseName + '%', allowMissing);
-	var intrinsicRealName = intrinsic.name;
-	var value = intrinsic.value;
-	var skipFurtherCaching = false;
-
-	var alias = intrinsic.alias;
-	if (alias) {
-		intrinsicBaseName = alias[0];
-		$spliceApply(parts, $concat([0, 1], alias));
-	}
-
-	for (var i = 1, isOwn = true; i < parts.length; i += 1) {
-		var part = parts[i];
-		if (part === 'constructor' || !isOwn) {
-			skipFurtherCaching = true;
-		}
-
-		intrinsicBaseName += '.' + part;
-		intrinsicRealName = '%' + intrinsicBaseName + '%';
-
-		if (hasOwn(INTRINSICS, intrinsicRealName)) {
-			value = INTRINSICS[intrinsicRealName];
-		} else if (value != null) {
-			if ($gOPD && (i + 1) >= parts.length) {
-				var desc = $gOPD(value, part);
-				isOwn = !!desc;
-
-				if (!allowMissing && !(part in value)) {
-					throw new $TypeError('base intrinsic for ' + name + ' exists, but the property is not available.');
-				}
-				// By convention, when a data property is converted to an accessor
-				// property to emulate a data property that does not suffer from
-				// the override mistake, that accessor's getter is marked with
-				// an `originalValue` property. Here, when we detect this, we
-				// uphold the illusion by pretending to see that original data
-				// property, i.e., returning the value rather than the getter
-				// itself.
-				if (isOwn && 'get' in desc && !('originalValue' in desc.get)) {
-					value = desc.get;
-				} else {
-					value = value[part];
-				}
-			} else {
-				isOwn = hasOwn(value, part);
-				value = value[part];
-			}
-
-			if (isOwn && !skipFurtherCaching) {
-				INTRINSICS[intrinsicRealName] = value;
-			}
-		}
-	}
-	return value;
-};
-
-
-/***/ }),
-
-/***/ "./node_modules/object.assign/node_modules/es-abstract/helpers/callBind.js":
-/*!*********************************************************************************!*\
-  !*** ./node_modules/object.assign/node_modules/es-abstract/helpers/callBind.js ***!
-  \*********************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-var bind = __webpack_require__(/*! function-bind */ "./node_modules/function-bind/index.js");
-
-var GetIntrinsic = __webpack_require__(/*! ../GetIntrinsic */ "./node_modules/object.assign/node_modules/es-abstract/GetIntrinsic.js");
-
-var $apply = GetIntrinsic('%Function.prototype.apply%');
-var $call = GetIntrinsic('%Function.prototype.call%');
-var $reflectApply = GetIntrinsic('%Reflect.apply%', true) || bind.call($call, $apply);
-
-var $defineProperty = GetIntrinsic('%Object.defineProperty%', true);
-
-if ($defineProperty) {
-	try {
-		$defineProperty({}, 'a', { value: 1 });
-	} catch (e) {
-		// IE 8 has a broken defineProperty
-		$defineProperty = null;
-	}
-}
-
-module.exports = function callBind() {
-	return $reflectApply(bind, $call, arguments);
-};
-
-var applyBind = function applyBind() {
-	return $reflectApply(bind, $apply, arguments);
-};
-
-if ($defineProperty) {
-	$defineProperty(module.exports, 'apply', { value: applyBind });
-} else {
-	module.exports.apply = applyBind;
-}
-
-
-/***/ }),
-
-/***/ "./node_modules/object.assign/node_modules/es-abstract/helpers/callBound.js":
-/*!**********************************************************************************!*\
-  !*** ./node_modules/object.assign/node_modules/es-abstract/helpers/callBound.js ***!
-  \**********************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-var GetIntrinsic = __webpack_require__(/*! ../GetIntrinsic */ "./node_modules/object.assign/node_modules/es-abstract/GetIntrinsic.js");
-
-var callBind = __webpack_require__(/*! ./callBind */ "./node_modules/object.assign/node_modules/es-abstract/helpers/callBind.js");
-
-var $indexOf = callBind(GetIntrinsic('String.prototype.indexOf'));
-
-module.exports = function callBoundIntrinsic(name, allowMissing) {
-	var intrinsic = GetIntrinsic(name, !!allowMissing);
-	if (typeof intrinsic === 'function' && $indexOf(name, '.prototype.')) {
-		return callBind(intrinsic);
-	}
-	return intrinsic;
-};
 
 
 /***/ }),
@@ -57252,17 +56623,15 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_Page__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../components/Page */ "./components/Page.js");
 /* harmony import */ var react_apollo__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! react-apollo */ "./node_modules/react-apollo/react-apollo.esm.js");
 /* harmony import */ var _lib_withData__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../lib/withData */ "./lib/withData.js");
-
-var _jsxFileName = "D:\\JEMMYS\\SQ\\advance_react_tutorial\\frontend\\pages\\_app.js";
-
-
 function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
+
+
+var _jsxFileName = "D:\\JEMMYS\\SQ\\advance_react_tutorial\\sq-project\\frontend\\pages\\_app.js";
+
 
 function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { Promise.resolve(value).then(_next, _throw); } }
 
 function _asyncToGenerator(fn) { return function () { var self = this, args = arguments; return new Promise(function (resolve, reject) { var gen = fn.apply(self, args); function _next(value) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "next", value); } function _throw(err) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "throw", err); } _next(undefined); }); }; }
-
-function _extends() { _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
@@ -57307,36 +56676,9 @@ var MyApp = /*#__PURE__*/function (_App) {
           Component = _this$props.Component,
           apollo = _this$props.apollo,
           pageProps = _this$props.pageProps;
-      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(next_app__WEBPACK_IMPORTED_MODULE_2__["Container"], {
-        __self: this,
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 21,
-          columnNumber: 7
-        }
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(react_apollo__WEBPACK_IMPORTED_MODULE_4__["ApolloProvider"], {
-        client: apollo,
-        __self: this,
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 22,
-          columnNumber: 9
-        }
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_components_Page__WEBPACK_IMPORTED_MODULE_3__["default"], {
-        __self: this,
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 23,
-          columnNumber: 11
-        }
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(Component, _extends({}, pageProps, {
-        __self: this,
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 24,
-          columnNumber: 13
-        }
-      })))));
+      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(next_app__WEBPACK_IMPORTED_MODULE_2__["Container"], null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(react_apollo__WEBPACK_IMPORTED_MODULE_4__["ApolloProvider"], {
+        client: apollo
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_components_Page__WEBPACK_IMPORTED_MODULE_3__["default"], null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(Component, pageProps))));
     }
   }], [{
     key: "getInitialProps",

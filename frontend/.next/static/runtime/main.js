@@ -2406,7 +2406,7 @@ module.exports = function (NAME, wrapper, methods, common, IS_MAP, IS_WEAK) {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-var core = module.exports = { version: '2.6.11' };
+var core = module.exports = { version: '2.6.12' };
 if (typeof __e == 'number') __e = core; // eslint-disable-line no-undef
 
 
@@ -3835,7 +3835,7 @@ var store = global[SHARED] || (global[SHARED] = {});
 })('versions', []).push({
   version: core.version,
   mode: __webpack_require__(/*! ./_library */ "./node_modules/core-js/library/modules/_library.js") ? 'pure' : 'global',
-  copyright: '© 2019 Denis Pushkarev (zloirock.ru)'
+  copyright: '© 2020 Denis Pushkarev (zloirock.ru)'
 });
 
 
@@ -6502,7 +6502,7 @@ function connect(options) {
       error.name = err.name;
       error.stack = err.stack; // __NEXT_DIST_DIR is provided by webpack
 
-      (0, _sourceMapSupport.rewriteStacktrace)(error, "D:\\JEMMYS\\SQ\\advance_react_tutorial\\frontend\\.next");
+      (0, _sourceMapSupport.rewriteStacktrace)(error, "D:\\JEMMYS\\SQ\\advance_react_tutorial\\sq-project\\frontend\\.next");
       return error;
     }
   };
@@ -17996,7 +17996,7 @@ module.exports = function(module) {
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! D:\JEMMYS\SQ\advance_react_tutorial\frontend\node_modules\next\dist\client\next-dev */"./node_modules/next/dist/client/next-dev.js");
+module.exports = __webpack_require__(/*! D:\JEMMYS\SQ\advance_react_tutorial\sq-project\frontend\node_modules\next\dist\client\next-dev */"./node_modules/next/dist/client/next-dev.js");
 
 
 /***/ }),
