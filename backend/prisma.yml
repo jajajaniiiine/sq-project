@@ -1,0 +1,11 @@
+# endpoint: https://eu1.prisma.sh/janine-balangue/delicakes_service/dev
+# datamodel: datamodel.prisma
+
+#endpoint: ${env:PRISMA_ENDPOINT}
+endpoint: https://delicakes-prod-ec23d29a5d.herokuapp.com/delicakes-prod/prod
+# endpoint: https://us1.prisma.sh/janine-balangue/advanced_react_tutorial/dev/advance_react_tutorial/advance_react_tutorial
+datamodel: datamodel.prisma
+secret: ${env:PRISMA_SECRET}
+hooks:
+  post-deploy:
+    - graphql get-schema -p prisma

@@ -1,0 +1,80 @@
+# import * from './generated/prisma.graphql';
+
+type SuccessMessage {
+  message: String
+}
+
+type Mutation {
+  # create item mutation
+  createItem(
+    title: String
+    description: String
+    price: Int
+    image: String
+    largeImage: String
+  ): Item!
+
+  # update item mutation
+  updateItem(id: ID!, title: String, description: String, price: Int): Item!
+
+  # delete item mutation
+  deleteItem(id: ID!): Item
+
+  # mutation for signup account
+  signup(email: String!, password: String!, name: String!): User!
+
+  # mutation for signin account
+  signin(email: String!, password: String!): User!
+
+  # mutation for sign out account
+  signout: SuccessMessage
+
+  # mutation for requesting email
+  requestReset(email: String!): SuccessMessage
+
+  # mutation for resetting password
+  resetPassword(
+    resetToken: String!
+    password: String!
+    confirmPassword: String!
+  ): User!
+
+  # mutation for updating user permissions
+  updatePermissions(permissions: [Permission], userId: ID!): User
+
+  # mutation for adding items to the cart
+  addToCart(id: ID!): CartItem
+
+  # mutation for removing an item from the cart
+  removeFromCart(id: ID!): CartItem
+
+  # mutation for creating order
+  createOrder(token: String!): Order!
+
+  # mutation for updating user account
+  updateUser(id: ID!, name: String, email: String): User
+}
+
+type Query {
+  items(
+    where: ItemWhereInput
+    orderBy: ItemOrderByInput
+    skip: Int
+    first: Int
+  ): [Item]!
+  item(where: ItemWhereUniqueInput!): Item
+  itemsConnection(where: ItemWhereInput): ItemConnection!
+  me: User
+  users: [User]!
+  order(id: ID!): Order
+  orders(orderBy: OrderOrderByInput): [Order]!
+  user(where: UserWhereUniqueInput!): User
+}
+
+type User {
+  id: ID!
+  name: String!
+  email: String!
+  permissions: [Permission!]!
+  cart: [CartItem!]!
+}
